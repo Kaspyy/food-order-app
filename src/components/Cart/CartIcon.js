@@ -1,6 +1,4 @@
-import React from 'react';
-
-export const CartIcon = () => {
+const CartIcon = () => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -11,3 +9,5 @@ export const CartIcon = () => {
     </svg>
   );
 };
+
+export default CartIcon;

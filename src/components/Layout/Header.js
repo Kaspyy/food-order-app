@@ -1,14 +1,15 @@
-import React, { Fragment } from 'react';
+import { Fragment } from 'react';
+
+import HeaderCartButton from './HeaderCartButton';
 import mealsImage from '../../assets/meals.jpg';
-import { HeaderCartButton } from './HeaderCartButton';
 import classes from './Header.module.css';
 
-export const Header = props => {
+const Header = props => {
   return (
     <Fragment>
       <header className={classes.header}>
         <h1>Lunch.ly</h1>
-        <HeaderCartButton />
+        <HeaderCartButton onClick={props.onShowCart} />
       </header>
       <div className={classes['main-image']}>
         <img src={mealsImage} alt='A table full of delicious food!' />
@@ -16,3 +17,5 @@ export const Header = props => {
     </Fragment>
   );
 };
+
+export default Header;
