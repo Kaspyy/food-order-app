@@ -5,7 +5,6 @@ import CartItem from './CartItem';
 import classes from './Cart.module.css';
 import CartContext from '../../store/cart-context';
 import Checkout from './Checkout';
-import { Fragment } from 'react/cjs/react.development';
 
 const Cart = props => {
   const [isCheckout, setIsCheckout] = useState(false);
@@ -87,7 +86,7 @@ const Cart = props => {
       {isCheckout && (
         <Checkout onConfirm={submitOrderHandler} onCancel={props.onClose} />
       )}
-      {!isCheckout && modalActions})
+      {!isCheckout && modalActions}
     </React.Fragment>
   );
 
